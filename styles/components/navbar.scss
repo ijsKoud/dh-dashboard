@@ -1,0 +1,85 @@
+.navbar {
+	background-color: $bg2;
+	height: 80px;
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom: 1px solid $border;
+	width: 100vw;
+	padding: 0.5rem;
+
+	position: fixed;
+	z-index: 9998;
+}
+
+.navbar-logo,
+.navbar-user {
+	display: grid;
+	place-items: center;
+}
+
+.navbar-user {
+	width: 125px;
+	height: 100%;
+
+	img {
+		border-radius: 50%;
+		cursor: pointer;
+		transition: all 0.5s ease;
+	}
+}
+
+.navbar__user-login {
+	font-size: 1.5rem;
+	padding: 10px;
+	border-radius: 5px;
+	text-align: center;
+
+	background-color: rgba($blurple, 0.4);
+	transition: all 0.5s ease;
+	cursor: pointer;
+
+	&:hover {
+		background-color: rgba($blurple, 0.9);
+	}
+}
+
+.navbar-dropdown {
+	background-color: $bg3;
+	border: 1px solid $border;
+
+	position: fixed;
+	z-index: 9999;
+	top: 4.5rem;
+	right: 25px;
+
+	padding: 1rem;
+	border-radius: 5px;
+
+	transform: translateY(-10px);
+	opacity: 0;
+
+	pointer-events: none;
+	text-align: center;
+	font-size: 1.2rem;
+	transition: all 0.5s ease;
+
+	button {
+		font-size: 1.2rem;
+		cursor: pointer;
+
+		color: rgba($white, 0.3);
+		transition: all 0.5s ease;
+
+		&:hover {
+			color: rgba($white, 0.9) !important;
+		}
+	}
+
+	&.enabled {
+		pointer-events: auto;
+		transform: translateY(0);
+		opacity: 1;
+	}
+}
