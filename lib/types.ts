@@ -1,16 +1,19 @@
 export interface User {
 	id: string;
-	system: boolean;
-	locale: string;
-	flags: number;
+	tag: string;
 	username: string;
-	bot: boolean;
 	discriminator: string;
 	avatar: string;
-	lastMessageChannelID: string;
-	createdTimestamp: number;
-	defaultAvatarURL: string;
-	tag: string;
-	avatarURL: string;
-	displayAvatarURL: string;
+	rank: -1 | 0 | 1 | 2 | 3 | 4 | 5 | 6;
 }
+
+export const ranks: Record<string, string> = {
+	"-1": "Outsider",
+	"0": "Member",
+	"1": "Trial Moderator",
+	"2": "Moderator",
+	"3": "CET",
+	"4": "Manager",
+	"5": "Senior",
+	"6": "Owner",
+};

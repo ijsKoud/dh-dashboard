@@ -29,7 +29,7 @@ const Navbar: React.FC = () => {
 				) : user ? (
 					<Image
 						alt="avatar"
-						src={user.displayAvatarURL}
+						src={user.avatar}
 						width={50}
 						height={50}
 						onClick={() => setShow(!show)}
