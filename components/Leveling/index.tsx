@@ -8,20 +8,20 @@ const Leveling: React.FC = () => {
 	return (
 		<div className="leveling">
 			<h1 className="leveling-title">Leveling Leaderboard</h1>
-			<div className="dhboard__items-container">
-				{Array(2000)
+			<div className="leveling-container">
+				{Array(100)
 					.fill(null)
 					.map((_, i) => (
 						<div key={i}>
-							<div className="dhboard-item">
+							<div className="leveling-item">
 								<h1
-									className="dhboard__item-title"
+									className="leveling__item-title"
 									style={{
 										background: getColour(i),
 									}}>
 									{i + 1}
 								</h1>
-								<p className="dhboard__item-username">DaanGamesDG#7621</p>
+								<p className="leveling__item-username">DaanGamesDG#7621</p>
 								<CircularProgressbar
 									className="progress-ring"
 									value={20}
@@ -33,7 +33,7 @@ const Leveling: React.FC = () => {
 									})}
 								/>
 							</div>
-							{i + 1 < 2000 && <div className="break-line" />}
+							{i + 1 < 100 && <div className="break-line" />}
 						</div>
 					))}
 			</div>

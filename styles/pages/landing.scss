@@ -24,14 +24,14 @@
 	margin-top: 2rem;
 }
 
-.dhboard__items-container {
+.leveling-container {
 	background: rgba($bg3, 0.6);
 	padding: 2em;
 	border-radius: 10px;
 	width: min(90%, 900px);
 }
 
-.dhboard-item {
+.leveling-item {
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -41,7 +41,7 @@
 	}
 }
 
-.dhboard__item-title {
+.leveling__item-title {
 	max-width: 45px;
 	font-size: 20px;
 	flex: 0 0 45px;
@@ -55,10 +55,15 @@
 	color: #fff;
 }
 
-.dhboard__item-username {
+.leveling__item-username {
 	margin-left: 1rem;
-	font-size: 1rem;
+	margin-right: 1rem;
+
+	font-size: 1.25rem;
 	font-weight: 500;
+
+	word-wrap: break-word;
+	overflow: hidden;
 }
 
 .progress-ring {
@@ -77,31 +82,9 @@
 }
 
 @media screen and (max-width: 960px) {
-	.dhboard__item-title {
-		font-size: 1.5rem;
-		width: 30px;
-		height: 30px;
-		line-height: 2rem;
-	}
-
-	.dhboard__item-username {
-		font-size: 1.3rem;
-		margin-top: 1.5rem;
-	}
-
 	.progress-ring {
 		margin-top: 0.7rem;
 		max-width: 60px;
 		max-height: 60px;
-	}
-}
-
-@media screen and (max-width: 500px) {
-	.progress-ring {
-		display: none;
-	}
-
-	.dhboard__item-username {
-		font-size: 1rem;
 	}
 }
