@@ -1,0 +1,191 @@
+.landing {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	min-height: 100vh;
+	width: 100vw;
+}
+
+.leveling {
+	width: 100%;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+
+	ul {
+		width: 100%;
+	}
+}
+
+.leveling-item {
+	margin-left: auto;
+	margin-right: auto;
+	background-color: rgba($bg3, 0.3);
+	transition: all 0.5s ease;
+
+	width: min(90%, 800px);
+
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	&:hover {
+		background-color: rgba($bg3, 0.9);
+	}
+
+	h4 {
+		font-weight: 400;
+		font-size: 1.5rem;
+	}
+}
+
+.leveling_item-logo {
+	border-radius: 50%;
+}
+
+.leveling_item-progress {
+	height: 80px;
+	width: 80px !important;
+}
+
+.leaderboardPlayerStat {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+	-o-box-orient: vertical;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+	-o-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	-o-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	border-radius: 50%;
+	padding: 1px;
+	width: 60px;
+	height: 60px;
+	background-color: #50555a;
+	position: relative;
+	z-index: 1;
+	margin-inline-start: 30px;
+}
+
+.leaderboardPlayerStat .leaderboardPlayerStatText {
+	z-index: 3;
+	display: -webkit-box;
+	display: -moz-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-moz-box-orient: vertical;
+	-o-box-orient: vertical;
+	-webkit-flex-direction: column;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-align: center;
+	-moz-box-align: center;
+	-o-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-moz-box-pack: center;
+	-o-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	margin-top: -1px;
+}
+
+.leaderboardPlayerStat .leaderboardPlayerStatText .leaderboardPlayerStatName {
+	font-size: 12px;
+	font-weight: 300;
+	line-height: 1;
+	margin-bottom: 1px;
+	color: #85878a;
+}
+
+.leaderboardPlayerStatText .leaderboardPlayerStatValue {
+	font-size: 18px;
+	font-weight: 600;
+	font-family: "Poppins";
+	line-height: 1;
+	margin-top: 5px;
+	color: #fff;
+}
+
+.leaderboardPlayerStat.p90 .leaderboardPlayerStatBarContainer {
+	clip: rect(auto, auto, auto, auto);
+}
+
+.leaderboardPlayerStat .leaderboardPlayerStatBarContainer {
+	z-index: 3;
+	position: absolute;
+	width: 60px;
+	height: 60px;
+	top: 0;
+	left: 0;
+	clip: rect(0, 60px, 60px, 30px);
+}
+
+.leaderboardPlayerStat.p90 .leaderboardPlayerStatBar {
+	-webkit-transform: rotate(324deg);
+	-moz-transform: rotate(324deg);
+	-o-transform: rotate(324deg);
+	-ms-transform: rotate(324deg);
+	transform: rotate(324deg);
+}
+
+.leaderboardPlayerStat .leaderboardPlayerStatBarContainer .leaderboardPlayerStatFill {
+	z-index: 4;
+	position: absolute;
+	border: 2px solid #62d3f5;
+	width: 60px;
+	height: 60px;
+	top: 0;
+	left: 0;
+	border-radius: 50%;
+	clip: rect(0, 30px, 60px, 0);
+}
+
+.leaderboardPlayerStat .leaderboardPlayerStatBarContainer .leaderboardPlayerStatBar {
+	z-index: 3;
+	position: absolute;
+	border: 2px solid #62d3f5;
+	width: 60px;
+	height: 60px;
+	top: 0;
+	left: 0;
+	border-radius: 50%;
+	clip: rect(0, 30px, 60px, 0);
+}
+
+.leaderboardPlayerStat:after {
+	position: absolute;
+	content: " ";
+	width: 56px;
+	height: 56px;
+	top: 2px;
+	left: 2px;
+	background-color: $bg2;
+	border-radius: 50%;
+	z-index: 2;
+}

@@ -1,7 +1,12 @@
 import type { NextPage } from "next";
+import Leveling from "../components/Leveling";
 
 const Landing: NextPage = () => {
-	return <div></div>;
+	return (
+		<main className="landing">
+			<Leveling />
+		</main>
+	);
 };
 
 export default Landing;
