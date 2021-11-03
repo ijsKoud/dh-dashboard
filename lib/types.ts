@@ -17,3 +17,14 @@ export const ranks: Record<string, string> = {
 	"5": "Senior",
 	"6": "Owner",
 };
+
+export interface LeaderboardStat {
+	level: {
+		id: string;
+		level: number;
+		xp: number;
+		bg: number;
+		tag: string;
+	};
+	i: number;
+}
