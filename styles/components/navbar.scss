@@ -57,6 +57,8 @@
 	padding: 1rem;
 	border-radius: 5px;
 
+	width: 250px;
+
 	transform: translateY(-10px);
 	opacity: 0;
 
@@ -82,4 +84,26 @@
 		transform: translateY(0);
 		opacity: 1;
 	}
+}
+
+.navbar-dropdown-user {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	span {
+		font-weight: 600;
+	}
+}
+
+.navbar-dropdown-username {
+	max-width: 150px;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	word-break: break-all;
+}
+
+.navbar-dropdown-item {
+	font-size: 1.5rem !important;
 }

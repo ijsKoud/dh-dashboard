@@ -20,13 +20,7 @@ const Navbar: React.FC = () => {
 				{loading ? (
 					<PulseLoader color="rgb(200, 195, 188)" />
 				) : user ? (
-					<Image
-						alt="avatar"
-						src={user.avatar}
-						width={50}
-						height={50}
-						onClick={() => setShow(!show)}
-					/>
+					<Image alt="avatar" src={user.avatar} width={50} height={50} onClick={() => setShow(!show)} />
 				) : (
 					<Link href={`${process.env.NEXT_PUBLIC_API}/oauth/login`}>
 						<a className="navbar__user-login">
