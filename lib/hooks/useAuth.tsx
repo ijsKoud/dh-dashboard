@@ -24,7 +24,7 @@ const useProvideAuth = (): UseAuth => {
 	const [loading, setLoading] = useState<true | false>(true);
 
 	useEffect(() => {
-		fetch<User>("/user/", { method: "GET", withCredentials: true })
+		fetch<User>("/api/user/", { method: "GET", withCredentials: true })
 			.then((res) => {
 				setUser(res.data);
 				setLoading(false);
