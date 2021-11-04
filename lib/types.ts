@@ -15,7 +15,7 @@ export const ranks: Record<string, string> = {
 	"3": "CET",
 	"4": "Manager",
 	"5": "Senior",
-	"6": "Owner",
+	"6": "Owner"
 };
 
 export interface LeaderboardStat {

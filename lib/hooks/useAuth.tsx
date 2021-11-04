@@ -37,6 +37,6 @@ const useProvideAuth = (): UseAuth => {
 	return {
 		user,
 		loading,
-		update,
+		update
 	};
 };
