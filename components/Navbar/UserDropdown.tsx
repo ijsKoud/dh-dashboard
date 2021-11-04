@@ -3,6 +3,8 @@ import Link from "next/link";
 import { ApiError, fetch, useAuth } from "../../lib";
 import { PulseLoader } from "react-spinners";
 import type { AxiosError } from "axios";
+import Modal from "../Modal";
+import RankcardModal from "./RankcardModal";
 
 interface Props {
 	enabled: boolean;
@@ -12,8 +14,14 @@ interface Props {
 const UserDropdown: React.FC<Props> = ({ enabled, setEnabled }) => {
 	const { user, update } = useAuth();
 	const [loading, setLoading] = useState(false);
+	const [rankModalOpen, setRankModalOpen] = useState(false);
 
 	const closeMenu = () => setEnabled(false);
+
+	const rankModal = () => {
+		closeMenu();
+		setRankModalOpen(true);
+	};
 
 	const logout = async () => {
 		setLoading(true);
@@ -33,43 +41,48 @@ const UserDropdown: React.FC<Props> = ({ enabled, setEnabled }) => {
 	};
 
 	return (
-		<ul className={`navbar-dropdown ${enabled ? "enabled" : ""}`.trim()}>
-			<li className="navbar-dropdown-user">
-				<p className="navbar-dropdown-username">{user?.username ?? "..."}</p>
-				<span>#{user?.discriminator ?? "0000"}</span>
-			</li>
-			<li>
-				<button className="navbar-dropdown-item" onClick={closeMenu}>
-					<i className="fas fa-address-card" /> Rankcard
-				</button>
-			</li>
-			<li>
-				<Link href="/modlogs">
-					<a className="navbar-dropdown-item" onClick={closeMenu}>
-						<i className="fas fa-exclamation-circle" /> Modlogs
-					</a>
-				</Link>
-			</li>
-			<li>
-				<Link href="/transcripts">
-					<a className="navbar-dropdown-item" onClick={closeMenu}>
-						<i className="fas fa-file-alt" /> Transcripts
-					</a>
-				</Link>
-			</li>
-			<li className="separator"></li>
-			<li>
-				<button className="navbar-dropdown-item" onClick={logout} disabled={loading}>
-					{loading ? (
-						<PulseLoader color="rgb(200, 195, 188)" />
-					) : (
-						<>
-							<i className="fas fa-sign-out-alt" /> Logout
-						</>
-					)}
-				</button>
-			</li>
-		</ul>
+		<>
+			<Modal isOpen={rankModalOpen} onClick={() => setRankModalOpen(false)}>
+				<RankcardModal handleClose={() => setRankModalOpen(false)} />
+			</Modal>
+			<ul className={`navbar-dropdown ${enabled ? "enabled" : ""}`.trim()}>
+				<li className="navbar-dropdown-user">
+					<p className="navbar-dropdown-username">{user?.username ?? "..."}</p>
+					<span>#{user?.discriminator ?? "0000"}</span>
+				</li>
+				<li>
+					<button className="navbar-dropdown-item" onClick={rankModal}>
+						<i className="fas fa-address-card" /> Rankcard
+					</button>
+				</li>
+				<li>
+					<Link href="/modlogs">
+						<a className="navbar-dropdown-item" onClick={closeMenu}>
+							<i className="fas fa-exclamation-circle" /> Modlogs
+						</a>
+					</Link>
+				</li>
+				<li>
+					<Link href="/transcripts">
+						<a className="navbar-dropdown-item" onClick={closeMenu}>
+							<i className="fas fa-file-alt" /> Transcripts
+						</a>
+					</Link>
+				</li>
+				<li className="separator"></li>
+				<li>
+					<button className="navbar-dropdown-item" onClick={logout} disabled={loading}>
+						{loading ? (
+							<PulseLoader color="rgb(200, 195, 188)" />
+						) : (
+							<>
+								<i className="fas fa-sign-out-alt" /> Logout
+							</>
+						)}
+					</button>
+				</li>
+			</ul>
+		</>
 	);
 };
 

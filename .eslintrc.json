@@ -1,6 +1,8 @@
 {
 	"extends": ["@sapphire", "next/core-web-vitals"],
 	"rules": {
-		"@typescript-eslint/no-base-to-string": "off"
+		"@typescript-eslint/no-base-to-string": "off",
+		"no-duplicate-imports": "off",
+		"@typescript-eslint/no-duplicate-imports": ["error"]
 	}
 }

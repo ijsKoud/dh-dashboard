@@ -33,3 +33,8 @@ export interface ApiError {
 	message: string;
 	error: string;
 }
+
+export interface SelectOption {
+	label: string;
+	value: any;
+}
