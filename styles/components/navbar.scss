@@ -77,6 +77,10 @@
 		&:hover {
 			color: rgba($white, 0.9) !important;
 		}
+
+		&:disabled {
+			cursor: default;
+		}
 	}
 
 	&.enabled {

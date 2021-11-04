@@ -28,7 +28,7 @@ const Navbar: React.FC = () => {
 						</a>
 					</Link>
 				)}
-				{true && <UserDropdown enabled={show} />}
+				{true && <UserDropdown enabled={show} setEnabled={setShow} />}
 			</div>
 		</nav>
 	);

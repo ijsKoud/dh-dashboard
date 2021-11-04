@@ -28,3 +28,8 @@ export interface LeaderboardStat {
 	};
 	i: number;
 }
+
+export interface ApiError {
+	message: string;
+	error: string;
+}
