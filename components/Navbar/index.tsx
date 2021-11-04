@@ -17,13 +17,6 @@ const Navbar: React.FC = () => {
 				</a>
 			</Link>
 			<div className="navbar-user">
-				{/* <Image
-					alt="avatar"
-					src={"https://static.daangamesdg.xyz/discord/pfp.gif"}
-					width={50}
-					height={50}
-					onClick={() => setShow(!show)}
-				/> */}
 				{loading ? (
 					<PulseLoader color="rgb(200, 195, 188)" />
 				) : user ? (
@@ -35,9 +28,11 @@ const Navbar: React.FC = () => {
 						onClick={() => setShow(!show)}
 					/>
 				) : (
-					<button className="navbar__user-login">
-						<i className="fab fa-discord" /> Login
-					</button>
+					<Link href={`${process.env.NEXT_PUBLIC_API}/oauth/login`}>
+						<a className="navbar__user-login">
+							<i className="fab fa-discord" /> Login
+						</a>
+					</Link>
 				)}
 				{true && <UserDropdown enabled={show} />}
 			</div>
