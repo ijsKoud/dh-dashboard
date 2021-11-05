@@ -1,9 +1,10 @@
-import axios from "axios";
+import axios, { AxiosError } from "axios";
 import React, { useEffect, useState } from "react";
-import { fetch, SelectOption } from "../../lib";
+import { ApiError, fetch, logger, SelectOption } from "../../lib";
 import Select from "../Select";
 import Image from "next/image";
 import { PulseLoader } from "react-spinners";
+import { alert, success } from "../../lib/notifications";
 
 interface Props {
 	handleClose: () => void;
@@ -16,7 +17,21 @@ const RankcardModal: React.FC<Props> = ({ handleClose }) => {
 
 	const save = async () => {
 		setLoading(true);
-		await new Promise((res) => setTimeout(res, 5e3));
+
+		try {
+			await fetch("/api/background", { method: "PUT", data: { backgroundId: option } });
+			success("Successfully updated", `Successfully updated your background to ${option}!`);
+		} catch (err) {
+			const error = err as AxiosError<ApiError>;
+			if (!("isAxiosError" in error)) {
+				console.log(error);
+				return;
+			}
+
+			logger.error(error.response?.data.error ?? error.message);
+			alert("Error while updating your background", error.response?.data.message ?? "Something went wrong, please try again later.");
+		}
+
 		setLoading(false);
 		handleClose();
 	};
@@ -40,7 +55,13 @@ const RankcardModal: React.FC<Props> = ({ handleClose }) => {
 		<div className="rankcard-modal">
 			<i className="fas fa-times" onClick={handleClose} />
 			<h1>Edit your rankcard background</h1>
-			<Select className="rankcard-select" options={options} isMulti={false} onChange={(value) => setOption((value as SelectOption).value)} />
+			<Select
+				className="rankcard-select"
+				options={options}
+				isMulti={false}
+				defaultValue={{ label: "Background 1", value: 1 }}
+				onChange={(value) => setOption((value as SelectOption).value)}
+			/>
 			<Image src={`${process.env.NEXT_PUBLIC_API}/api/backgrounds/${option}`} alt="background" width={500} height={200} />
 			<div className="rankcard-save">
 				{loading ? (

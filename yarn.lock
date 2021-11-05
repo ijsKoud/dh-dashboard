@@ -65,6 +65,13 @@
     "@babel/helper-validator-identifier" "^7.14.9"
     to-fast-properties "^2.0.0"
 
+"@daangamesdg/logger@^1.1.0":
+  version "1.1.0"
+  resolved "https://registry.yarnpkg.com/@daangamesdg/logger/-/logger-1.1.0.tgz#e56b393588dadc2fcdd79157154efe18a94d7094"
+  integrity sha512-0T+DOnNqN/aTPNlDHQeWAupBAJAFOmWjevNV4VyMjvcKX1jF790cV8xwrb4vfm7d19pBEDydfyR5TrrFPSDtEA==
+  dependencies:
+    moment "^2.29.1"
+
 "@emotion/cache@^11.4.0", "@emotion/cache@^11.5.0":
   version "11.5.0"
   resolved "https://registry.yarnpkg.com/@emotion/cache/-/cache-11.5.0.tgz#a5eb78cbef8163939ee345e3ddf0af217b845e62"
@@ -363,6 +370,13 @@
   version "15.7.4"
   resolved "https://registry.yarnpkg.com/@types/prop-types/-/prop-types-15.7.4.tgz#fcf7205c25dff795ee79af1e30da2c9790808f11"
   integrity sha512-rZ5drC/jWjrArrS8BR6SIr4cWpW09RNTYt9AMZo3Jwwif+iacXAqgVjm0B0Bv/S1jhDXKHqRVNCbACkJ89RAnQ==
+
+"@types/react-notifications-component@^3.1.1":
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/@types/react-notifications-component/-/react-notifications-component-3.1.1.tgz#85691cb425e266eeda1c82b67ca95b36a6566e86"
+  integrity sha512-1b8yPkEOS266q1I5QebG4pcP437Nn9rQ/w8pcHF9kISLbU39HrpFilu9Lmg45FOpskowNzOkKyl/yh71FJwfzg==
+  dependencies:
+    "@types/react" "*"
 
 "@types/react-transition-group@^4.4.0":
   version "4.4.4"
@@ -2203,6 +2217,11 @@ minimist@^1.2.0:
   resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
   integrity sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
 
+moment@^2.29.1:
+  version "2.29.1"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.29.1.tgz#b2be769fa31940be9eeea6469c075e35006fa3d3"
+  integrity sha512-kHmoybcPV8Sqy59DwNDY3Jefr64lK/by/da0ViFcuA4DH0vQg5Q6Ze5VimxkfQNSC+Mls/Kx53s7TjP1RhFEDQ==
+
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
@@ -2684,6 +2703,11 @@ react-is@^16.7.0, react-is@^16.8.1:
   version "16.13.1"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
+
+react-notifications-component@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/react-notifications-component/-/react-notifications-component-3.1.0.tgz#c676b7897a3fb10c554b69dba25fe2a9da6170e2"
+  integrity sha512-qq+zgqVIa2zhlw+RvO2QSPk7xHLvZWTHl9VKRO56sMUef/UrcUTqOswL0DSJtRIpZYZhclquQUfDxD6H2w8aWA==
 
 react-refresh@0.8.3:
   version "0.8.3"
