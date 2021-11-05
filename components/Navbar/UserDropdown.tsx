@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import { ApiError, fetch, useAuth } from "../../lib";
+import { ApiError, fetch, logger, useAuth } from "../../lib";
 import { PulseLoader } from "react-spinners";
 import type { AxiosError } from "axios";
 import Modal from "../Modal";
 import RankcardModal from "./RankcardModal";
+import { alert } from "../../lib/notifications";
 
 interface Props {
 	enabled: boolean;
@@ -33,7 +34,9 @@ const UserDropdown: React.FC<Props> = ({ enabled, setEnabled }) => {
 			const error = err as AxiosError<ApiError>;
 			if (!("isAxiosError" in error)) return;
 			console.error(error.response?.data.error);
-			// to do: error logging
+
+			logger.error(error.response?.data.error ?? error.message);
+			alert("Error while signing out", error.response?.data.message ?? "Something went wrong, please try again later.");
 		}
 
 		setLoading(false);
