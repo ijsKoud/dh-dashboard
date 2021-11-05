@@ -1,9 +1,21 @@
 import React from "react";
 import Link from "next/link";
+import Head from "next/head";
 
 const NotFound: React.FC = () => {
 	return (
 		<>
+			<Head>
+				<title>404 – Not found</title>
+				<meta property="og:site_name" content="DH Dashboard" />
+				<meta property="og:title" content="DH Dashboard" />
+				<meta property="og:type" content="site" />
+				<meta
+					property="og:description"
+					content="Dashboard for the open-source multi-purpose Discord bot for Draavo's Hangout written in TypeScript."
+				/>
+				<meta property="og:image" content="/favicon.ico" />
+			</Head>
 			<main className="notfound">
 				<div className="notfound-error">
 					<h1 className="notfound-number">4</h1>
