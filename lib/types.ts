@@ -38,3 +38,9 @@ export interface SelectOption {
 	label: string;
 	value: any;
 }
+
+export type ModlogsList = {
+	user: User | null;
+	id: string;
+	amount: number;
+}[];
