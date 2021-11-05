@@ -10,9 +10,9 @@ export interface User {
 export const ranks: Record<string, string> = {
 	"-1": "Outsider",
 	"0": "Member",
-	"1": "Trial Moderator",
-	"2": "Moderator",
-	"3": "CET",
+	"1": "CET",
+	"2": "Trial Moderator",
+	"3": "Moderator",
 	"4": "Manager",
 	"5": "Senior",
 	"6": "Owner"

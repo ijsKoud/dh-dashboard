@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import { ApiError, fetch, logger, useAuth } from "../../lib";
+import { ApiError, fetch, logger, ranks, useAuth } from "../../lib";
 import { PulseLoader } from "react-spinners";
 import type { AxiosError } from "axios";
 import Modal from "../Modal";
@@ -52,6 +52,9 @@ const UserDropdown: React.FC<Props> = ({ enabled, setEnabled }) => {
 				<li className="navbar-dropdown-user">
 					<p className="navbar-dropdown-username">{user?.username ?? "..."}</p>
 					<span>#{user?.discriminator ?? "0000"}</span>
+				</li>
+				<li className="navbar-dropdown-user">
+					<p className="navbar-dropdown-username">{ranks[user?.rank ?? "-1"]}</p>
 				</li>
 				<li>
 					<button className="navbar-dropdown-item" onClick={rankModal}>
