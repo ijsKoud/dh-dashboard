@@ -56,14 +56,7 @@ a,
 	background-color: $border;
 }
 
-.background {
-	background: url("/assets/background.svg");
-	background-size: cover;
-	background-position: center;
-	height: 100vh;
-}
-
-.background-full {
+main {
 	background: url("/assets/background.svg");
 	background-size: 150vw;
 	background-position: center;
@@ -179,5 +172,6 @@ pre {
 @import "./components/navbar.scss";
 @import "./components/modal.scss";
 @import "./components/rankcard.scss";
+@import "./components/footer.scss";
 
 @import "./pages/landing.scss";
