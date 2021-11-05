@@ -16,6 +16,7 @@ $green: #77b300;
 $red: #ff4141;
 $orange: #ff9800;
 $blurple: #5865f2;
+$blurpleAlt: #4150f5;
 
 * {
 	box-sizing: border-box;
@@ -175,3 +176,4 @@ pre {
 @import "./components/footer.scss";
 
 @import "./pages/landing.scss";
+@import "./pages/404.scss";
