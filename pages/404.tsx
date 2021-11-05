@@ -37,7 +37,7 @@ const NotFound: React.FC = () => {
 					</div>
 					<h1 className="notfound-number">4</h1>
 				</div>
-				<div className="notfound-text">Oops. The page youre looking for doesnt exist.</div>
+				<div className="notfound-text">Oops. The page you&#39;re looking for doesn&#39;t exist.</div>
 				<Link href="/">
 					<a className="notfound-button">Back Home</a>
 				</Link>
