@@ -44,3 +44,19 @@ export type ModlogsList = {
 	id: string;
 	amount: number;
 }[];
+
+export interface ModlogsUserResponse {
+	user: User | null;
+	logs: Modlog[];
+}
+
+export interface Modlog {
+	caseId: number;
+	id: string;
+	moderator: User | null;
+	reason: string;
+	type: string;
+	startDate: Date;
+	endDate: Date | null;
+	timeoutFinished: boolean | null;
+}

@@ -4,13 +4,17 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
+
+	> h1 {
+		text-align: center;
+	}
 }
 
 .modlogs-list {
 	background-color: rgba($bg3, 0.6);
 	padding: 1rem;
 	border-radius: 10px;
-	width: min(90%, 900px);
+	width: min(90%, 1000px);
 }
 
 .modlogs-item {
@@ -53,6 +57,30 @@
 	max-width: 150px;
 	min-width: 100px;
 	text-align: center;
+}
+
+.modlog-item {
+	flex-direction: column;
+	cursor: default;
+
+	> h3 {
+		text-align: center;
+	}
+}
+
+.modlogs-moderator {
+	display: flex;
+	align-items: center;
+
+	.modlogs-user {
+		max-width: 400px;
+		margin-left: 10px;
+	}
+}
+
+.modlog-goback {
+	width: min(90%, 1000px);
+	font-size: 1.5rem;
 }
 
 @media screen and (max-width: 500px) {
