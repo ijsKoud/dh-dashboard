@@ -60,3 +60,7 @@ export interface Modlog {
 	endDate: Date | null;
 	timeoutFinished: boolean | null;
 }
+
+export interface TranscriptsResponse {
+	files: string[];
+}
