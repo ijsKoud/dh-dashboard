@@ -16,6 +16,9 @@ const Navbar: React.FC = () => {
 					<Image src="/favicon.ico" alt="logo" width={60} height={60} />
 				</a>
 			</Link>
+			<Link href="/installation">
+				<a className="navbar-link">Installation Guide</a>
+			</Link>
 			<div className="navbar-user">
 				{loading ? (
 					<PulseLoader color="rgb(200, 195, 188)" />

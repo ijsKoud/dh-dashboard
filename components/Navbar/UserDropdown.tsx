@@ -57,6 +57,13 @@ const UserDropdown: React.FC<Props> = ({ enabled, setEnabled }) => {
 					<p className="navbar-dropdown-username">{ranks[user?.rank ?? "-1"]}</p>
 				</li>
 				<li>
+					<Link href="/installation">
+						<a className="navbar-dropdown-item installation-guide" onClick={closeMenu}>
+							<i className="fas fa-file" /> Installation guide
+						</a>
+					</Link>
+				</li>
+				<li>
 					<button className="navbar-dropdown-item" onClick={rankModal}>
 						<i className="fas fa-address-card" /> Rankcard
 					</button>

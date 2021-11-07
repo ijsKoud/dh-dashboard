@@ -17,10 +17,18 @@
 .navbar-user {
 	display: grid;
 	place-items: center;
+	width: 125px;
+}
+
+.navbar-link {
+	font-size: 1.5rem;
+
+	@media screen and (max-width: 500px) {
+		display: none;
+	}
 }
 
 .navbar-user {
-	width: 125px;
 	height: 100%;
 
 	.navbar-avatar {
@@ -110,4 +118,13 @@
 
 .navbar-dropdown-item {
 	font-size: 1.5rem !important;
+
+	&.installation-guide {
+		font-size: 1.35rem !important;
+
+		display: none;
+		@media screen and (max-width: 500px) {
+			display: block;
+		}
+	}
 }
