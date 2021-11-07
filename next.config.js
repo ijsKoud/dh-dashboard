@@ -11,7 +11,19 @@ const data = {
 	reactStrictMode: true,
 	images: {
 		domains: [`${parseDomain(process.env.NEXT_PUBLIC_API)}`, "static.daangamesdg.xyz", "cdn.discordapp.com"]
-	}
+	},
+	redirects: () => [
+		{
+			permanent: true,
+			source: "/discord",
+			destination: "https://draavo.xyz/discord",
+		},
+		{
+			permanent: true,
+			source: "/github",
+			destination: "https://github.com/DaanGamesDG/dh-dashboard",
+		},
+	],
 };
 
 module.exports = data;
