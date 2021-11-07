@@ -1,2 +1,2 @@
-export * from "./botGuide";
+export * from "./BotGuide";
 export * from "./DashboardGuide";
