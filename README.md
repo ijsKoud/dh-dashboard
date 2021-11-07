@@ -15,7 +15,7 @@ This dashboard is designed to work with the [DH Assistant bot](https://daangames
 
 ## Install
 
-**This project is still WIP, please stop DMing me "How to install, not working" kinda stuff cuz it's not finished yet**. You will see a small description here that will redirect you to an installation page **once this bot is fully working and operational!**
+The installation guide can be found her: https://draavo.daangamesdg.xyz/installation
 
 ## Author
 
