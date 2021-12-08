@@ -22,8 +22,8 @@
 		"react-spinners": "^0.11.0"
 	},
 	"devDependencies": {
-		"@sapphire/eslint-config": "^4.0.7",
-		"@sapphire/prettier-config": "^1.2.6",
+		"@sapphire/eslint-config": "^4.0.8",
+		"@sapphire/prettier-config": "^1.2.7",
 		"@sapphire/ts-config": "^3.1.6",
 		"@types/node": "16.11.12",
 		"@types/react": "17.0.37",
