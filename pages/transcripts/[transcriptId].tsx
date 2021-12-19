@@ -21,8 +21,8 @@ const Transcripts: NextPage = () => {
 
 		fetch<any>(`/api/transcript/${query.transcriptId}`, { method: "GET", cancelToken: token })
 			.then((res) => {
-				if (!res.data) setIsAvailable(false);
-				else setIsAvailable(true);
+				if (res.data) setIsAvailable(true);
+				else setIsAvailable(false);
 			})
 			.catch(() => setIsAvailable(false));
 

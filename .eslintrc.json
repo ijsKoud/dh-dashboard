@@ -3,6 +3,7 @@
 	"rules": {
 		"@typescript-eslint/no-base-to-string": "off",
 		"no-duplicate-imports": "off",
-		"@typescript-eslint/no-duplicate-imports": ["error"]
+		"@typescript-eslint/no-duplicate-imports": ["error"],
+		"@next/next/no-img-element": "off"
 	}
 }
