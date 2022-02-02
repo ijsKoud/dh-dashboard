@@ -23,6 +23,11 @@ const data = {
 			source: "/github",
 			destination: "https://github.com/DaanGamesDG/dh-dashboard",
 		},
+		{
+			permanent: true,
+			source: "/mod-apps",
+			destination: "https://docs.google.com/forms/d/e/1FAIpQLSePVyx5uOCYeiWThuxUaFIZZYeCd9CTQClEV49XdBnN_Tskpw/viewform",
+		}
 	],
 };
 
