@@ -12,7 +12,7 @@
 		"@daangamesdg/logger": "^1.1.0",
 		"axios": "^0.26.0",
 		"framer-motion": "^6.2.6",
-		"moment": "^2.29.1",
+		"moment": "^2.29.2",
 		"next": "12.1.0",
 		"react": "17.0.2",
 		"react-circular-progressbar": "^2.0.4",
