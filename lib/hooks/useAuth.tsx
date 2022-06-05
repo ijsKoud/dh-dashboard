@@ -1,6 +1,6 @@
 import React, { useState, useContext, createContext, useEffect } from "react";
 import { fetch } from "../fetch";
-import type { User } from "../types";
+import type { FC, User } from "../types";
 
 interface UseAuth {
 	user: User | null;
@@ -10,7 +10,7 @@ interface UseAuth {
 
 const authContext = createContext<UseAuth>({ user: null, loading: true, update: () => void 0 });
 
-export const ProvideAuth: React.FC = ({ children }) => {
+export const ProvideAuth: FC = ({ children }) => {
 	const auth = useProvideAuth();
 	return <authContext.Provider value={auth}>{children}</authContext.Provider>;
 };
