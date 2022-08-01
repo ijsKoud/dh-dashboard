@@ -19,17 +19,17 @@
 		"react-dom": "18.2.0",
 		"react-notifications-component": "4.0.1",
 		"react-select": "^5.4.0",
-		"react-spinners": "^0.13.3"
+		"react-spinners": "^0.13.4"
 	},
 	"devDependencies": {
 		"@sapphire/eslint-config": "^4.3.7",
 		"@sapphire/prettier-config": "^1.4.3",
 		"@sapphire/ts-config": "3.3.4",
-		"@types/node": "16.11.45",
+		"@types/node": "16.11.47",
 		"@types/react": "18.0.15",
 		"@types/react-notifications-component": "^3.1.1",
-		"@typescript-eslint/eslint-plugin": "^5.30.7",
-		"@typescript-eslint/parser": "^5.30.7",
+		"@typescript-eslint/eslint-plugin": "^5.32.0",
+		"@typescript-eslint/parser": "^5.32.0",
 		"eslint": "8",
 		"eslint-config-next": "12.2.3",
 		"sass": "^1.54.0",
