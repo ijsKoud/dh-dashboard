@@ -11,7 +11,7 @@
 	"dependencies": {
 		"@daangamesdg/logger": "^1.1.0",
 		"axios": "^0.27.2",
-		"framer-motion": "^6.5.1",
+		"framer-motion": "^7.2.1",
 		"moment": "^2.29.4",
 		"next": "12.2.3",
 		"react": "18.2.0",
